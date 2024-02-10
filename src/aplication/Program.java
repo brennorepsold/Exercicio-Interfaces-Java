@@ -23,7 +23,7 @@ public class Program {
 		
 		System.out.print("Data (dd/MM/YYYY): ");
 		sc.nextLine();
-		LocalDate data = LocalDate.parse(sc.nextLine(),fmt);
+		LocalDate data = LocalDate.parse(sc.next(),fmt);
 		
 		System.out.print("Valor do contrato: ");
 		double valorContrato = sc.nextDouble();
@@ -40,8 +40,10 @@ public class Program {
 		System.out.println("Parcelas:");
 		
 		for(Installment x : contract.getList()) {
-			System.out.println(x.getDueDate().format(fmt) + " - " + x.getAmount());
+			System.out.println(x.toString());
 		}
+		
+		sc.close();
 
 	}
 
